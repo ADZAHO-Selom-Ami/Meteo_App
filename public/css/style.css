@@ -189,3 +189,60 @@ body{
     justify-content: space-around;
     margin-top: 30px;
 }
+
+.city-meteo {
+
+    margin-top: 30px;
+}
+
+.city-meteo-content{
+    width: auto;
+    height: auto;
+    border: 5px solid #FAA300;
+    border-radius: 30px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 20px 40px 20px;
+}
+
+.city-meteo-content p {
+    font-size: 20px;
+    text-align: center;
+    color: #3a74b6;
+}
+
+.city-meteo-content img {
+    width: 70px;
+    height: 70px;
+}
+
+
+
+.city-meteo ul li {
+    font-size: 20px;
+    color: #3a74b6;
+    list-style-type: square;
+    margin-bottom: 25px;
+}
+
+hr {
+    border: 2px solid #FAA300;
+    height: 500px;
+
+}
+
+.city-meteo-content div:nth-child(1) {
+    margin-left: 10px;
+}
+
+.city-meteo-content div:last-child {
+    margin-right: 10px;
+}
+
+.precipitation{
+    display: flex;
+    justify-content: space-around;
+}

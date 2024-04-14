@@ -27,17 +27,18 @@
 			<form action="/addCity" method="POST">
 				<div class="display-input">
 					<label for="cityName">Nom de la ville:</label>
-					<input type="text" id="cityName" name="cityName" required>
-				</div>
-
-				<div class="display-input">
-					<label for="lat">Latitude:</label>
-					<input type="number" id="lat" name="lat" required>
+					<input type="text" id="cityName" name="cityName" required autofocus>
 				</div>
 
 				<div class="display-input">
 					<label for="lon">Longitude:</label>
-					<input type="number" id="lon" name="lon" required>
+					<input type="number" step="any" id="lon" name="lon" required>
+				</div>
+
+
+				<div class="display-input">
+					<label for="lat">Latitude:</label>
+					<input type="number" step="any" id="lat" name="lat" required>
 				</div>
 
 				<button type="submit">Ajouter</button>

@@ -1,10 +1,74 @@
 {% extends 'base.twig' %}
 
 {% block body %}
-	<h1 class="title">Météo de
-		{{ city.cityName }}</h1>
+<h1 class="title">Météo de
+	{{ city.cityName }}</h1>
 
-	<div class="city-container">{{ data.air_temperature }}</div>
+<div class="city-meteo">
+	{% for entry in weatherData %}
+		{% if entry.time|date("Y-m-d") == "now"|date("Y-m-d") %}
+			<div class="city-meteo-content">
+				<div>
+					<h2>Date et Heure : </h2>
+					<p><strong>{{ entry.time|date("d-m-Y H:i") }}</strong></p>
+				</div>
 
 
-	{% endblock %}
+					<hr>
+
+				<div>
+					<h2>Conditions actuelles</h2>
+					<ul>
+						<li>Pression atmosphérique au niveau de la mer :
+							<strong>{{ entry.airPressureAtSeaLevel }}
+							hPa </strong></li>
+						<li>Température de l'air :
+							<strong>{{ entry.airTemperature }}
+							°C</strong></li>
+						<li>Couverture nuageuse :
+							<strong>{{ entry.cloudCover }}
+							%</strong></li>
+						<li>Humidité relative :
+							<strong>{{ entry.humidity }}
+							%</strong></li>
+						<li>Direction du vent :
+							<strong>{{ entry.windDirection }}
+							degrés</strong></li>
+						<li>Vitesse du vent :
+							<strong>{{ entry.windSpeed }}
+							m/s</strong></li>
+					</ul>
+
+				</div>
+
+				<hr>
+
+				<div>
+					<h2>Prévisions pour les prochaines heures</h2>
+
+					<h3>1 prochaine heure :</h3>
+					<div class="precipitation">
+						<img src="/img/png/{{ entry.next1HoursSummary.symbol_code }}.png" alt="icon" />
+						<p>Précipitations: <strong>{{ entry.next1HoursDetails.precipitation_amount }} mm</strong></p>
+					</div>
+
+					<h3>6 prochaines heures :</h3>
+					<div class="precipitation">
+						<img src="/img/png/{{ entry.next6HoursSummary.symbol_code }}.png" alt="icon" />
+						
+						<p>Précipitations: <strong>{{ entry.next6HoursDetails.precipitation_amount }} mm</strong></p>
+					</div>
+
+					<h3>12 prochaines heures :</h3>	
+					<div class="precipitation">
+						<img src="/img/png/{{ entry.next12HoursSummary.symbol_code }}.png" alt="icon" />
+					</div>
+
+				</div>
+
+
+			</div>
+		{% endif %}
+	{% endfor %}
+</div>
+{% endblock %}
