@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+	<div class="city-container">
+		<a href="/meteo/{{ city.id }}" class="card-dash-theme">
+			<p>Nom :
+				{{ city.cityName }}</p>
+			<p>Latitude :
+				{{ city.lat }}</p>
+			<p>Longitude :
+				{{ city.lon }}</p>
+		</a>
+
+	</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+	<h1 class="title">Liste des villes</h1>
+
+	<div class="city-container">
+
+		{% for city in cities %}
+			<a href="/meteo/{{ city.id }}" class="card-dash-theme">
+				<p>Nom :
+					{{ city.cityName }}</p>
+				<p>Latitude :
+					{{ city.lat }}</p>
+				<p>Longitude :
+					{{ city.lon }}</p>
+			</a>
+		{% endfor %}
+	</div>
+
+
+	<button id="myBtn">Ajouter une ville</button>
+
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close material-icons" onclick="closeModal()">close</span>
+			<h1 class="title">Ajouter une ville</h1>
+			<form action="/addCity" method="POST">
+				<div class="display-input">
+					<label for="cityName">Nom de la ville:</label>
+					<input type="text" id="cityName" name="cityName" required>
+				</div>
+
+				<div class="display-input">
+					<label for="lat">Latitude:</label>
+					<input type="number" id="lat" name="lat" required>
+				</div>
+
+				<div class="display-input">
+					<label for="lon">Longitude:</label>
+					<input type="number" id="lon" name="lon" required>
+				</div>
+
+				<button type="submit">Ajouter</button>
+			</form>
+		</div>
+
+	</div>
+
+{% endblock %}

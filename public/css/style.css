@@ -1,0 +1,191 @@
+body{
+    width: 100%;
+    height: 100%;
+    background-color: lightgoldenrodyellow;
+}
+
+.navbar {
+    height: 100px;
+    background-color: #59D5E0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #FAA300;
+    margin: -8px 0 0 -8px;
+}
+
+.navbar img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+
+.nav-element {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 40px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 30px;
+    width: 50%;
+    align-items: center;
+
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.display-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    margin: 8px 0;
+}
+
+.display-input label {
+    width: 30%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.display-input input {
+    width: 60%;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 20px;
+    border: 1px solid #6ecbd2;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+
+.modal-content button {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #6ecbd2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #6ecbd2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    align-items: center;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.search button {
+    width: 150px;
+    height: 30px;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    border-radius: 25px;
+    padding: 5px;
+    background-color: #FAA300;
+    color: #fff;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 36px;
+    color: #3a74b6;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+#myBtn {
+    width: 20%;
+    padding: 12px;
+    border: 1px solid #6ecbd2;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #6ecbd2;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 40%;
+    margin-top: 40px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.card-dash-theme {
+    width: 270px;
+    height: 200px;
+    border: 5px solid #FAA300;
+    border-radius: 30px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.card-dash-theme p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #3a74b6;
+
+}
+
+.city-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+}

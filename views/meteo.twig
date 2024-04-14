@@ -1,0 +1,10 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+	<h1 class="title">Météo de
+		{{ city.cityName }}</h1>
+
+	<div class="city-container">{{ data.air_temperature }}</div>
+
+
+	{% endblock %}
